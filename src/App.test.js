@@ -28,9 +28,15 @@ describe('App', () => {
     expect(appState).not.toBeNull();
   });
 
-  it('', () => {
+  it('has a people property on app state', () => {
     const appState = appWrapper.state();
 
     expect(appState.people).toBeDefined();
+  });
+
+  it('', () => {
+    const personList = appWrapper.find(PersonList);
+
+    expect(personList.props().people).toEqual(appWrapper.state().people);
   });
 });
