@@ -28,4 +28,11 @@ describe('App', () => {
 
     expect(appState).not.toBeNull();
   });
+
+  it('', () => {
+    const appWrapper = shallow(<App />);
+    const appState = appWrapper.state();
+
+    expect(appState.people).toBeDefined();
+  });
 });
