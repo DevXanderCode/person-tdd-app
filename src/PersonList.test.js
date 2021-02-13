@@ -3,5 +3,10 @@ import { shallow } from 'enzyme';
 import PersonList from './PersonList';
 
 describe('PersonList', () => {
-  it('', () => {});
+  it('', () => {
+    const personListWrapper = shallow(<PersonList />);
+    const peopleListUls = personListWrapper.find('ul');
+
+    expect(peopleListUls).toHaveLength(1);
+  });
 });
